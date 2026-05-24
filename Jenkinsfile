@@ -35,6 +35,11 @@ pipeline {
                 sh 'docker push zabihulla01/p1:latest'
             }
         }
+       stage('run docker image'){
+          steps{
+            sh 'docker run -d -p 80:80 --name abc zabihulla01/p1:latest'
+          }
+        } 
 
     }
 }
