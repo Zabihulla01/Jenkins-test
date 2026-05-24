@@ -1,12 +1,78 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My First Page</title>
+    <title>DevOps Project</title>
+
+    <style>
+        body{
+            font-family: Arial;
+            background: #1e1e2f;
+            color:white;
+            text-align:center;
+            margin-top:100px;
+        }
+
+        .box{
+            background:#2d2d44;
+            width:400px;
+            margin:auto;
+            padding:30px;
+            border-radius:10px;
+        }
+
+        button{
+            padding:10px 20px;
+            background:orange;
+            border:none;
+            cursor:pointer;
+            border-radius:5px;
+        }
+
+    </style>
 </head>
+
 <body>
 
-    <h1>Hello World</h1>
-    <p>Welcome to my website</p>
+<div class="box">
+
+<h1>🚀 Jenkins CI/CD Pipeline</h1>
+
+<p id="time"></p>
+
+<p>
+GitHub → Jenkins → Docker → Docker Hub
+</p>
+
+<button onclick="show()">Click</button>
+
+<p id="msg"></p>
+
+</div>
+
+
+<script>
+
+function show(){
+document.getElementById("msg")
+.innerHTML="Deployment Successful ✅";
+}
+
+
+function updateTime(){
+
+let now = new Date();
+
+document.getElementById("time")
+.innerHTML =
+"Current Time: " +
+now.toLocaleTimeString();
+
+}
+
+setInterval(updateTime,1000);
+
+</script>
+
 
 </body>
 </html>
